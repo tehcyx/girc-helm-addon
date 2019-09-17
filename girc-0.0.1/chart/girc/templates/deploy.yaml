@@ -14,3 +14,5 @@ spec:
       containers:
       - name: girc
         image: "docker.pkg.github.com/tehcyx/girc/app:d8e3e6718e6960aa5a5e4201b2144a23fa84fdd3"
+        ports:
+            - containerPort: 6665
