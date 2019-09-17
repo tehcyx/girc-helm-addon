@@ -1,0 +1,6 @@
+name: standard
+id: 56654ea1-68ed-40d0-9975-c07e49678b04
+description: "Standard plan, deploying the app"
+displayName: Standard
+bindable: true
+free: true

@@ -1,0 +1,53 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "description": "This is the API definition of girc, but since girc doesn't have an API, this is just a tiny example of what a spec looks like.",
+      "version": "1.0.0",
+      "title": "girc"
+    },
+    "host": "api.github.com",
+    "basePath": "/repos/tehcyx/girc",
+    "schemes": [
+      "https"
+    ],
+    "paths": {
+      "/issues/comments": {
+        "get": {
+          "summary": "get issue comments",
+          "description": "",
+          "produces": [
+            "application/json"
+          ],
+          "responses": {
+            "200": {
+              "description": "successful operation",
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/Comment"
+                }
+              }
+            },
+            "400": {
+              "description": "Invalid status value"
+            }
+          }
+        }
+      }
+    },
+    "definitions": {
+      "Comment": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      }
+    },
+    "externalDocs": {
+      "description": "Find out more about girc",
+      "url": "https://github.com/tehcyx/girc"
+    }
+  }

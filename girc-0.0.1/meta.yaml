@@ -1,0 +1,13 @@
+name: girc
+version: 0.0.1
+id: b1469b57-d4a3-412d-b5b5-f11c97d7c9f3
+description: "A simple app which contains a Deployment."
+displayName: "Testing girc deployment"
+
+tags: girc-test
+labels:
+  showcase: "true"
+providerDisplayName: Daniel Roth
+longDescription: "A simple app which contains a Deployment."
+bindable: false
+planUpdatable: true
