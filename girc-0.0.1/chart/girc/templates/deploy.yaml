@@ -2,12 +2,13 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   name: {{ template "girc.fullname" . }}
+  helm.sh/chart: {{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}
 spec:
   replicas: 1
   template:
     metadata:
       annotations:
-        sidecar.istio.io/inject: "true"
+        sidecar.istio.io/inject: "false"
       labels:
         app: {{ template "girc.fullname" . }}
     spec:
