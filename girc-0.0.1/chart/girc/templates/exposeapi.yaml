@@ -1,0 +1,17 @@
+{{ if eq .Values.receiving true }}
+apiVersion: gateway.kyma-project.io/v1alpha2
+kind: Api
+metadata:
+  name: {{ template "girc.fullname" . }}
+  labels:
+    helm.sh/chart: {{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}
+    app: {{ template "girc.fullname" . }}
+    chart: {{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}
+    release: {{ template "girc.fullname" . }}
+    heritage: {{ .Release.Service }}
+spec:
+    service:
+      name: {{ template "girc.fullname" . }}
+      port: 6665
+    hostname: {{ template "girc.fullname" . }}
+{{ end }}
