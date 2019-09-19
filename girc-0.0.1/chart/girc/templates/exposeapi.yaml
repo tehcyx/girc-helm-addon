@@ -1,4 +1,3 @@
-{{ if eq .Values.receiving true }}
 apiVersion: gateway.kyma-project.io/v1alpha2
 kind: Api
 metadata:
@@ -14,4 +13,3 @@ spec:
       name: {{ template "girc.fullname" . }}
       port: 6665
     hostname: {{ template "girc.fullname" . }}
-{{ end }}
